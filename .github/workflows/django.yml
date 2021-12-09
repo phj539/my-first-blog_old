@@ -42,7 +42,8 @@ jobs:
           
       - name: Code Deploy 
         run: |
-          aws deploy create-deployment 
-             --application-name test
-             --deployment-config-name CodeDeployDefault.OneAtATime
-             --deployment-group-name test-group
+          aws deploy create-deployment \
+             --application-name test \
+             --deployment-config-name CodeDeployDefault.OneAtATime \
+             --deployment-group-name test-group \
+             --github-location repository=phj539/my-first-blog_old,commitId=${{ github.sha }}
