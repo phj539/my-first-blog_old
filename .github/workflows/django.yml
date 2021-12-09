@@ -43,6 +43,6 @@ jobs:
       - name: Code Deploy 
         run: |
           aws deploy create-deployment 
-             --application-name - 
+             --application-name test
              --deployment-config-name CodeDeployDefault.OneAtATime
-             --deployment-group-name test-group #{배포 그룹}
+             --deployment-group-name test-group
