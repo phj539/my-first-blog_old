@@ -41,6 +41,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
           
       - name: Code Deploy 
-        run: aws deploy create-deployment --application-name test #{애플리케이션 이름}
-          --deployment-config-name CodeDeployDefault.OneAtATime
-          --deployment-group-name test-group #{배포 그룹}
+        run: |
+          aws deploy create-deployment --application-name test #{애플리케이션 이름}
+             --deployment-config-name CodeDeployDefault.OneAtATime
+             --deployment-group-name test-group #{배포 그룹}
